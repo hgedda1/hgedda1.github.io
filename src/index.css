@@ -28,10 +28,10 @@
   font-family: 'Made Of Scars', sans-serif;
 }
 
-/* Fullscreen layout with sidebar */
+/* Fullscreen grid layout with sidebar */
 .page-layout {
   display: grid;
-  grid-template-columns: 200px 1fr; /* Sidebar occupies 200px, content takes remaining space */
+  grid-template-columns: 200px 1fr; /* Sidebar on the left in portrait mode */
   height: 100vh;
   width: 100vw;
 }
@@ -44,13 +44,37 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding-top: 1rem;
 }
 
 .sidebar a {
   color: white;
   text-decoration: none;
   margin: 10px;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg); /* Rotate items vertically */
+}
+
+/* In landscape mode, move sidebar to the top */
+@media (max-width: 768px) and (orientation: landscape) {
+  .page-layout {
+    grid-template-columns: 1fr; /* Disable left anchoring and make sidebar go on top */
+    grid-template-rows: auto 1fr; /* Sidebar takes the top row */
+    height: 100vh; /* Keep full height */
+  }
+
+  .sidebar {
+    height: auto; /* Sidebar adapts to content height */
+    width: 100vw; /* Full width of the screen */
+    flex-direction: row; /* Align sidebar elements horizontally */
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .sidebar a {
+    transform: rotate(0deg); /* Remove rotation in landscape mode */
+    margin: 0 15px; /* Horizontal spacing */
+  }
 }
 
 /* Centering the main content */
@@ -61,7 +85,8 @@
   align-items: center;
   height: 100vh;
   text-align: center;
-  width: 100vw; /* Takes the entire screen width */
+  width: 100vw;
+  padding: 1rem;
 }
 
 /* Breathing animation for H1 */
@@ -79,45 +104,49 @@
   }
 }
 
-/* Solid text for H2 with caret clipping effect */
-.h2-solid {
+/* H2 fill animation */
+.h2-fill-animation {
   position: relative;
-  font-size: 2rem;
-  font-family: 'Nunito Sans', sans-serif;
-  color: black; /* Solid color for light mode */
+  color: transparent;
+  background-image: linear-gradient(90deg, black 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 0%;
+  -webkit-background-clip: text;
+  animation: fill-text 7s infinite;
 }
 
-.dark .h2-solid {
-  color: white; /* Solid color for dark mode */
+.dark .h2-fill-animation {
+  background-image: linear-gradient(90deg, white 50%, transparent 50%);
 }
 
-/* The caret that moves across the h2 text */
-.caret-reveal {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: black; /* Color for light mode */
-  animation: reveal-text 3s infinite;
-}
-
-.dark .caret-reveal {
-  background-color: white; /* Color for dark mode */
-}
-
-@keyframes reveal-text {
+@keyframes fill-text {
   0% {
-    left: 0;
-    width: 0;
+    background-position: 0%;
   }
   50% {
-    left: 0;
-    width: 100%;
+    background-position: 100%;
   }
   100% {
-    left: 100%;
-    width: 0;
+    background-position: 0%;
+  }
+}
+
+/* Responsive font scaling */
+@media (max-width: 640px) {
+  .h2-fill-animation {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .h2-fill-animation {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .h2-fill-animation {
+    font-size: 1.75rem;
   }
 }
 
@@ -128,4 +157,12 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode toggle positioning in landscape */
+@media (max-width: 640px) and (orientation: landscape) {
+  .absolute {
+    top: 3px;
+    right: 3px;
+  }
 }

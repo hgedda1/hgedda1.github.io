@@ -13,17 +13,14 @@ const MainContent = () => {
     <div className="main-content-container">
       {/* Name with breathing effect */}
       <animated.h1
-        className="text-6xl text-black dark:text-white font-customDancingScript breathing-animation"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black dark:text-white font-customDancingScript breathing-animation"
         style={breathingAnimation}
       >
         Hemanth Gedda
       </animated.h1>
 
-      {/* Subtitle with caret animation */}
-      <div className="relative">
-        <h2 className="h2-solid">Cybersecurity Professional</h2>
-        <div className="caret-reveal"></div>
-      </div>
+      {/* Subtitle with fill animation */}
+      <h2 className="h2-fill-animation">Cybersecurity Professional</h2>
     </div>
   );
 };
