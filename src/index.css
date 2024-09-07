@@ -166,3 +166,13 @@ body {
     right: 3px;
   }
 }
+
+/* Styling for project categories and projects */
+.project-category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
