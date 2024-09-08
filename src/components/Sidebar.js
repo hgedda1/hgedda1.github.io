@@ -1,6 +1,12 @@
+// src/components/Sidebar.js
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ showSidebar }) => {
+  if (!showSidebar) {
+    return null; // don't render the sidebar is false
+  }
+
   return (
     <div className="fixed left-0 top-0 h-full bg-gray-100 dark:bg-gray-900 w-16 flex flex-col items-center">
       {/* Logo at the top */}
@@ -11,34 +17,34 @@ const Sidebar = () => {
       </div>
       {/* Rotated navigation links */}
       <nav className="flex flex-col space-y-10 mt-20">
-        <a
+        <Link
           className="text-black dark:text-white font-customNunitoSans"
-          href="#home"
+          to="/"
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
         >
           Home
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-black dark:text-white font-customNunitoSans"
-          href="#projects"
+          to="/projects"
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
         >
           Projects
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-black dark:text-white font-customNunitoSans"
-          href="#skills"
+          to="/skills"
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
         >
           Skills
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-black dark:text-white font-customNunitoSans"
-          href="#about"
+          to="/about"
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
         >
           About Me
-        </a>
+        </Link>
       </nav>
     </div>
   );
