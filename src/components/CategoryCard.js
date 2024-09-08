@@ -1,6 +1,9 @@
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function CategoryCard({ category }) {
+  const navigate = useNavigate(); // Get the navigate function from react-router-dom
+
   return (
     <div className="relative p-3 sm:p-4 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden max-w-xs sm:max-w-sm lg:max-w-md mx-auto border border-gray-300 dark:border-gray-700 min-h-[180px] flex flex-col justify-between">
       {/* Blue line on the top left */}
@@ -21,8 +24,11 @@ function CategoryCard({ category }) {
       </div>
 
       <div className="relative inline-block group mt-2">
-        <button className="bg-cyan-400 text-black text-xs sm:text-sm font-semibold py-1 px-3 flex items-center rounded transition-transform transform group-hover:scale-105 relative z-10">
-          <span className="relative z-10">View project</span>
+        <button
+          className="bg-cyan-400 text-black text-xs sm:text-sm font-semibold py-1 px-3 flex items-center rounded transition-transform transform group-hover:scale-105 relative z-10"
+          onClick={() => navigate(category.path)} // Navigate to the category's path
+        >
+          <span className="relative z-10">View projects</span>
           <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4 relative z-10" />
         </button>
 
