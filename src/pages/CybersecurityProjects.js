@@ -6,8 +6,14 @@ const categories = [
   {
     id: "01",
     title: "IAM Projects",
-    description: "Explore Identity and Access Management (IAM) Projects.",
+    description: "Explore various Identity and Access Management (IAM) Projects.",
     path: "/projects/cybersecurity/iam"
+  },
+  {
+    id: "02",
+    title: "SIEM Projects",
+    description: "Explore Security Information & Event Management (SIEM) projects.",
+    path: "/projects/cybersecurity/siem"
   }
 ];
 

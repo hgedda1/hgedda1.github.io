@@ -1,7 +1,12 @@
+// src/components/Sidebar.js
 import React from "react";
-import { Link } from "react-router-dom"; // Use Link for navigation
+import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ showSidebar }) => {
+  if (!showSidebar) {
+    return null; // don't render the sidebar is false
+  }
+
   return (
     <div className="fixed left-0 top-0 h-full bg-gray-100 dark:bg-gray-900 w-16 flex flex-col items-center">
       {/* Logo at the top */}

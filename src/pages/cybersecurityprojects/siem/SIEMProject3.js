@@ -1,14 +1,17 @@
+// src/pages/cybersecurityprojects/siem/SIEMProject3.js
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import rbacMarkdown from "../../../files/rbac.md";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+import siemMarkdown from "../../../files/siem3.md";
 
-export default function RBACProject() {
+export default function SIEMProject3() {
   const [content, setContent] = useState("");
-  const navigate = useNavigate(); // for back navigation
+  const navigate = useNavigate(); // useNavigate for back navigation
 
   useEffect(() => {
-    fetch(rbacMarkdown)
+    fetch(siemMarkdown)
       .then((response) => response.text())
       .then((text) => setContent(text));
   }, []);
@@ -25,15 +28,20 @@ export default function RBACProject() {
           &larr; Back
         </button>
 
-        {/* RBAC Project Header */}
+        {/* SIEM Project Header */}
         <h1 className="text-2xl sm:text-3xl font-bold mx-auto text-black dark:text-white blue-line-breathing">
-          RBAC Project
+          Compliance M & R
         </h1>
       </div>
 
       {/* Markdown Content */}
       <div className="max-w-4xl w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg markdown-content">
-        <ReactMarkdown>{content}</ReactMarkdown>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]} // For GitHub-Flavored Markdown support
+          rehypePlugins={[rehypeRaw]}  // For rendering raw HTML content
+        >
+          {content}
+        </ReactMarkdown>
       </div>
 
       {/* Back Button at the bottom of the page */}
