@@ -15,6 +15,18 @@ const categories = [
     title: "SIEM Projects",
     description: "Explore Security Information & Event Management (SIEM) projects.",
     path: "/projects/cybersecurity/siem"
+  },
+  {
+    id: "03",
+    title: "Forensics Projects",
+    description: "Explore Cyber Incident Response and Digital Forensics projects.",
+    path: "/projects/cybersecurity/forensics"
+  },
+  {
+    id: "04",
+    title: "Risk Assessment Projects",
+    description: "Explore Cyber Risk Assessment and Quantification projects.",
+    path: "/projects/cybersecurity/riskassessment"
   }
 ];
 

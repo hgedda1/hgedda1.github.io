@@ -14,6 +14,14 @@ import SIEMProjects from './pages/cybersecurityprojects/siem/SIEMProjects';
 import SIEMProject1 from './pages/cybersecurityprojects/siem/SIEMProject1';
 import SIEMProject2 from './pages/cybersecurityprojects/siem/SIEMProject2';
 import SIEMProject3 from './pages/cybersecurityprojects/siem/SIEMProject3';
+import ForensicsProjects from './pages/cybersecurityprojects/forensics/ForensicsProjects';
+import IncidentResponseProject from './pages/cybersecurityprojects/forensics/IncidentResponseProject';
+import DigitalForensicsProject from './pages/cybersecurityprojects/forensics/DigitalForensicsProject';
+import SIEMIncidentResponseProject from './pages/cybersecurityprojects/forensics/SIEMIncidentResponseProject';
+import RiskAssessmentProjects from './pages/cybersecurityprojects/riskassessment/RiskAssessmentProjects';
+import DevelopingRiskAssessmentFramework from './pages/cybersecurityprojects/riskassessment/DevelopingRiskAssessmentFramework';
+import CybersecurityRiskAssessmentAudit from './pages/cybersecurityprojects/riskassessment/CybersecurityRiskAssessmentAudit';
+import ContinuousRiskMonitoring from './pages/cybersecurityprojects/riskassessment/ContinuousRiskMonitoring';
 import "./App.css";
 
 // Layout component to conditionally show/hide Sidebar
@@ -27,7 +35,13 @@ const Layout = ({ children }) => {
     "/projects/cybersecurity/iam/sso",
     "/projects/cybersecurity/siem/siem1",
     "/projects/cybersecurity/siem/siem2",
-    "/projects/cybersecurity/siem/siem3"
+    "/projects/cybersecurity/siem/siem3",
+    "/projects/cybersecurity/forensics/incident-response",
+    "/projects/cybersecurity/forensics/digital-forensics",
+    "/projects/cybersecurity/forensics/siem-incident-response",
+    "/projects/cybersecurity/riskassessment/developing-risk-framework",
+    "/projects/cybersecurity/riskassessment/risk-assessment-audit",
+    "/projects/cybersecurity/riskassessment/continuous-risk-monitoring"
   ];
 
   // Check if the current route should hide the sidebar
@@ -68,14 +82,30 @@ function App() {
           <Route path="/" element={<MainContent />} />
           <Route path="/projects" element={<ProjectCategories />} />
           <Route path="/projects/cybersecurity" element={<CybersecurityProjects />} />
+
+          {/* IAM Projects */}
           <Route path="/projects/cybersecurity/iam" element={<IAMProjects />} />
           <Route path="/projects/cybersecurity/iam/rbac" element={<RBACProject />} />
           <Route path="/projects/cybersecurity/iam/mfa" element={<MFAProject />} />
           <Route path="/projects/cybersecurity/iam/sso" element={<SSOProject />} />
+
+          {/* SIEM Projects */}
           <Route path="/projects/cybersecurity/siem" element={<SIEMProjects />} />
           <Route path="/projects/cybersecurity/siem/siem1" element={<SIEMProject1 />} />
           <Route path="/projects/cybersecurity/siem/siem2" element={<SIEMProject2 />} />
           <Route path="/projects/cybersecurity/siem/siem3" element={<SIEMProject3 />} />
+          
+          {/* Forensics Projects */}
+          <Route path="/projects/cybersecurity/forensics" element={<ForensicsProjects />} />
+          <Route path="/projects/cybersecurity/forensics/incident-response" element={<IncidentResponseProject />} />
+          <Route path="/projects/cybersecurity/forensics/digital-forensics" element={<DigitalForensicsProject />} />
+          <Route path="/projects/cybersecurity/forensics/siem-incident-response" element={<SIEMIncidentResponseProject />} />
+
+          {/* Risk Assessment Projects */}
+          <Route path="/projects/cybersecurity/riskassessment" element={<RiskAssessmentProjects />} />
+          <Route path="/projects/cybersecurity/riskassessment/developing-risk-framework" element={<DevelopingRiskAssessmentFramework />} />
+          <Route path="/projects/cybersecurity/riskassessment/risk-assessment-audit" element={<CybersecurityRiskAssessmentAudit />} />
+          <Route path="/projects/cybersecurity/riskassessment/continuous-risk-monitoring" element={<ContinuousRiskMonitoring />} />
         </Routes>
 
         {/* Dark/Light Mode Toggle */}
