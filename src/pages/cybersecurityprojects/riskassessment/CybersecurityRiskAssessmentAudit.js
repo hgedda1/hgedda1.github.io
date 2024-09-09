@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import riskAssessmentAuditMarkdown from "../../../files/risk-assessment-audit.md";
+import riskAssessmentAuditMarkdown from "../../../files/riskassessment/risk-assessment-audit.md";
 
 export default function CybersecurityRiskAssessmentAudit() {
   const [content, setContent] = useState("");
@@ -24,7 +24,7 @@ export default function CybersecurityRiskAssessmentAudit() {
           &larr; Back
         </button>
         <h1 className="text-2xl sm:text-3xl font-bold mx-auto text-black dark:text-white blue-line-breathing">
-          Cybersecurity Risk Assessment Audit
+          Risk Assessment
         </h1>
       </div>
 

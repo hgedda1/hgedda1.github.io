@@ -22,6 +22,10 @@ import RiskAssessmentProjects from './pages/cybersecurityprojects/riskassessment
 import DevelopingRiskAssessmentFramework from './pages/cybersecurityprojects/riskassessment/DevelopingRiskAssessmentFramework';
 import CybersecurityRiskAssessmentAudit from './pages/cybersecurityprojects/riskassessment/CybersecurityRiskAssessmentAudit';
 import ContinuousRiskMonitoring from './pages/cybersecurityprojects/riskassessment/ContinuousRiskMonitoring';
+import DataProtectionProjects from './pages/cybersecurityprojects/dataprotection/DataProtectionProjects';
+import EncryptionProject from './pages/cybersecurityprojects/dataprotection/EncryptionProject';
+import DLPProject from './pages/cybersecurityprojects/dataprotection/DLPProject';
+import GDPRProject from './pages/cybersecurityprojects/dataprotection/GDPRProject';
 import "./App.css";
 
 // Layout component to conditionally show/hide Sidebar
@@ -106,6 +110,12 @@ function App() {
           <Route path="/projects/cybersecurity/riskassessment/developing-risk-framework" element={<DevelopingRiskAssessmentFramework />} />
           <Route path="/projects/cybersecurity/riskassessment/risk-assessment-audit" element={<CybersecurityRiskAssessmentAudit />} />
           <Route path="/projects/cybersecurity/riskassessment/continuous-risk-monitoring" element={<ContinuousRiskMonitoring />} />
+          
+          {/* Data Protection Projects */}
+          <Route path="/projects/cybersecurity/dataprotection" element={<DataProtectionProjects />} />
+          <Route path="/projects/cybersecurity/dataprotection/encryption" element={<EncryptionProject />} />
+          <Route path="/projects/cybersecurity/dataprotection/dlp" element={<DLPProject />} />
+          <Route path="/projects/cybersecurity/dataprotection/gdpr" element={<GDPRProject />} />
         </Routes>
 
         {/* Dark/Light Mode Toggle */}

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import developingRiskFrameworkMarkdown from "../../../files/developing-risk-framework.md";
+import developingRiskFrameworkMarkdown from "../../../files/riskassessment/developing-risk-framework.md";
 
 export default function DevelopingRiskAssessmentFramework() {
   const [content, setContent] = useState("");
@@ -24,7 +24,7 @@ export default function DevelopingRiskAssessmentFramework() {
           &larr; Back
         </button>
         <h1 className="text-2xl sm:text-3xl font-bold mx-auto text-black dark:text-white blue-line-breathing">
-          Developing a Cyber Risk Assessment Framework
+          Risk Assessment Framework
         </h1>
       </div>
 

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import incidentResponseMarkdown from "../../../files/incident-response.md";
+import incidentResponseMarkdown from "../../../files/forensics/incident-response.md";
 
 export default function IncidentResponseProject() {
   const [content, setContent] = useState("");

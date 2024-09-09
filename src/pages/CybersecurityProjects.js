@@ -27,6 +27,12 @@ const categories = [
     title: "Risk Assessment Projects",
     description: "Explore Cyber Risk Assessment and Quantification projects.",
     path: "/projects/cybersecurity/riskassessment"
+  },
+  {
+    id: "05",
+    title: "Data Protection Projects",
+    description: "Explore Data Protection and Privacy projects.",
+    path: "/projects/cybersecurity/dataprotection"
   }
 ];
 

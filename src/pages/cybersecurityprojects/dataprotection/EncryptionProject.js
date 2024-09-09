@@ -1,15 +1,15 @@
-// src/pages/cybersecurityprojects/forensics/DigitalForensicsProject.js
+// src/pages/cybersecurityprojects/dataprotection/EncryptionProject.js
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import digitalForensicsMarkdown from "../../../files/forensics/digital-forensics.md";
+import encryptionMarkdown from "../../../files/dataprotection/encryption.md";
 
-export default function DigitalForensicsProject() {
+export default function EncryptionProject() {
   const [content, setContent] = useState("");
   const navigate = useNavigate(); // for back navigation
 
   useEffect(() => {
-    fetch(digitalForensicsMarkdown)
+    fetch(encryptionMarkdown)
       .then((response) => response.text())
       .then((text) => setContent(text));
   }, []);
@@ -18,17 +18,17 @@ export default function DigitalForensicsProject() {
     <div className="relative bg-gray-100 dark:bg-gray-900 min-h-screen p-6 flex flex-col items-center">
       {/* Header Section */}
       <div className="w-full max-w-4xl flex items-center mb-4 relative">
-        {/* Back Button at the top-left */}
+        {/* Back Button */}
         <button
           className="button-81 absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-900 dark:text-white dark:bg-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-600 border rounded-3xl px-4 py-2"
-          onClick={() => navigate(-1)} // Go back to the previous page
+          onClick={() => navigate(-1)}
         >
           &larr; Back
         </button>
 
         {/* Project Header */}
         <h1 className="text-2xl sm:text-3xl font-bold mx-auto text-black dark:text-white blue-line-breathing">
-          Digital Forensics
+          DESS
         </h1>
       </div>
 
@@ -37,11 +37,11 @@ export default function DigitalForensicsProject() {
         <ReactMarkdown>{content}</ReactMarkdown>
       </div>
 
-      {/* Back Button at the bottom of the page */}
+      {/* Bottom Back Button */}
       <div className="w-full max-w-4xl flex justify-center mt-8">
         <button
           className="button-81 text-gray-900 dark:text-white dark:bg-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-600 border rounded-3xl px-6 py-3"
-          onClick={() => navigate(-1)} // Go back to the previous page
+          onClick={() => navigate(-1)}
         >
           &larr; Back
         </button>

@@ -1,8 +1,8 @@
 // src/pages/cybersecurityprojects/forensics/SIEMIncidentResponseProject.js
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ReactMarkdown from "react-markdown";  // Make sure to import ReactMarkdown
-import SIEMIncidentResponseMarkdown from "../../../files/siem-incident-response.md";
+import ReactMarkdown from "react-markdown"; 
+import SIEMIncidentResponseMarkdown from "../../../files/forensics/siem-incident-response.md";
 
 export default function SIEMIncidentResponseProject() {
   const [content, setContent] = useState("");

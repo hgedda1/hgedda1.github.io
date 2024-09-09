@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import continuousRiskMonitoringMarkdown from "../../../files/continuous-risk-monitoring.md";
+import continuousRiskMonitoringMarkdown from "../../../files/riskassessment/continuous-risk-monitoring.md";
 
 export default function ContinuousRiskMonitoring() {
   const [content, setContent] = useState("");
@@ -24,7 +24,7 @@ export default function ContinuousRiskMonitoring() {
           &larr; Back
         </button>
         <h1 className="text-2xl sm:text-3xl font-bold mx-auto text-black dark:text-white blue-line-breathing">
-          Continuous Risk Monitoring and Management
+          Risk Monitoring
         </h1>
       </div>
 
