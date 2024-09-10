@@ -64,9 +64,12 @@ export default function EndpointSecurityProjects() {
 
       {/* Back Button positioned at the center-bottom */}
       <div className="mt-8 w-full flex justify-center">
-        <Button className="button-81" onClick={() => navigate(-1)}>
+        <button
+          className="button-81 text-gray-900 dark:text-white dark:bg-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-600 border rounded-3xl px-4 py-2"
+          onClick={() => window.history.back()} // Go back to the previous page
+        >
           &larr; Back
-        </Button>
+        </button>
       </div>
     </div>
   );

@@ -30,6 +30,14 @@ import EndpointSecurityProjects from './pages/cybersecurityprojects/endpointsecu
 import ComprehensiveEndpoint from './pages/cybersecurityprojects/endpointsecurity/ComprehensiveEndpoint';
 import EndpointCompliance from './pages/cybersecurityprojects/endpointsecurity/EndpointCompliance';
 import EndpointSecurity from './pages/cybersecurityprojects/endpointsecurity/EndpointSecurity';
+import RegulatoryComplianceProjects from './pages/cybersecurityprojects/regulatorycompliance/RegulatoryComplianceProjects';
+import GDPRCompliance from './pages/cybersecurityprojects/regulatorycompliance/GDPRCompliance';
+import PCIDSSCompliance from './pages/cybersecurityprojects/regulatorycompliance/PCIDSSCompliance';
+import ComplianceMonitoring from './pages/cybersecurityprojects/regulatorycompliance/ComplianceMonitoring';
+import VulnerabilityManagementProjects from './pages/cybersecurityprojects/vulnerabilitymanagement/VulnerabilityManagementProjects';
+import PatchAutomation from './pages/cybersecurityprojects/vulnerabilitymanagement/PatchAutomation';
+import WebApplication from './pages/cybersecurityprojects/vulnerabilitymanagement/WebApplication';
+
 import "./App.css";
 
 // Layout component to conditionally show/hide Sidebar
@@ -126,6 +134,17 @@ function App() {
           <Route path="/projects/cybersecurity/endpointsecurity/comprehensive-endpoint" element={<ComprehensiveEndpoint />} />
           <Route path="/projects/cybersecurity/endpointsecurity/endpoint-compliance" element={<EndpointCompliance />} />
           <Route path="/projects/cybersecurity/endpointsecurity/endpoint-security" element={<EndpointSecurity />} />
+
+          {/* Regulatory compliance Projects */}
+          <Route path="/projects/cybersecurity/regulatorycompliance" element={<RegulatoryComplianceProjects />} />
+          <Route path="/projects/cybersecurity/regulatorycompliance/gdpr-compliance" element={<GDPRCompliance />} />
+          <Route path="/projects/cybersecurity/regulatorycompliance/pci-dss-compliance" element={<PCIDSSCompliance />} />
+          <Route path="/projects/cybersecurity/regulatorycompliance/compliance-monitoring" element={<ComplianceMonitoring />} />
+
+          {/* vulnerability management Projects */}
+          <Route path="/projects/cybersecurity/vulnerabilitymanagement" element={<VulnerabilityManagementProjects />} />
+          <Route path="/projects/cybersecurity/vulnerabilitymanagement/patchautomation" element={<PatchAutomation />} />
+          <Route path="/projects/cybersecurity/vulnerabilitymanagement/webapplication" element={<WebApplication />} />
         </Routes>
 
         {/* Dark/Light Mode Toggle */}

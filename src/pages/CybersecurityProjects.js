@@ -41,6 +41,20 @@ const categories = [
     description: "Explore Endpoint Security projects.",
     path: "/projects/cybersecurity/endpointsecurity",
   },
+  {
+    id: "07",
+    title: "Regulatory Compliance and Auditing Projects",
+    description: "Explore projects related to regulatory compliance and auditing.",
+    path: "/projects/cybersecurity/regulatorycompliance"
+  },
+  {
+    id: "08",
+    title: "Vulnerability Management Projects",
+    description: "Explore projects on vulnerability management and patch automation.",
+    path: "/projects/cybersecurity/vulnerabilitymanagement"
+  }
+  
+  
 ];
 
 export default function CybersecurityProjects() {
