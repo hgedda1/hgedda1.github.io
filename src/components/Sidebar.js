@@ -23,7 +23,9 @@ const Sidebar = () => {
     "/projects/cybersecurity/riskassessment",
     "/projects/cybersecurity/siem",
     "/projects/cybersecurity/dataprotection",
-    "/projects/cybersecurity/endpointsecurity"
+    "/projects/cybersecurity/endpointsecurity",
+    "/projects/cybersecurity/regulatorycompliance",
+    "/projects/cybersecurity/vulnerabilitymanagement"
   ];
 
   const showSidebar = !hideSidebarRoutes.includes(pathname);
