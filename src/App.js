@@ -26,6 +26,10 @@ import DataProtectionProjects from './pages/cybersecurityprojects/dataprotection
 import EncryptionProject from './pages/cybersecurityprojects/dataprotection/EncryptionProject';
 import DLPProject from './pages/cybersecurityprojects/dataprotection/DLPProject';
 import GDPRProject from './pages/cybersecurityprojects/dataprotection/GDPRProject';
+import EndpointSecurityProjects from './pages/cybersecurityprojects/endpointsecurity/EndpointSecurityProjects';
+import ComprehensiveEndpoint from './pages/cybersecurityprojects/endpointsecurity/ComprehensiveEndpoint';
+import EndpointCompliance from './pages/cybersecurityprojects/endpointsecurity/EndpointCompliance';
+import EndpointSecurity from './pages/cybersecurityprojects/endpointsecurity/EndpointSecurity';
 import "./App.css";
 
 // Layout component to conditionally show/hide Sidebar
@@ -116,6 +120,12 @@ function App() {
           <Route path="/projects/cybersecurity/dataprotection/encryption" element={<EncryptionProject />} />
           <Route path="/projects/cybersecurity/dataprotection/dlp" element={<DLPProject />} />
           <Route path="/projects/cybersecurity/dataprotection/gdpr" element={<GDPRProject />} />
+          
+          {/* Endpoint Protection Projects */}
+          <Route path="/projects/cybersecurity/endpointsecurity" element={<EndpointSecurityProjects />} />
+          <Route path="/projects/cybersecurity/endpointsecurity/comprehensive-endpoint" element={<ComprehensiveEndpoint />} />
+          <Route path="/projects/cybersecurity/endpointsecurity/endpoint-compliance" element={<EndpointCompliance />} />
+          <Route path="/projects/cybersecurity/endpointsecurity/endpoint-security" element={<EndpointSecurity />} />
         </Routes>
 
         {/* Dark/Light Mode Toggle */}

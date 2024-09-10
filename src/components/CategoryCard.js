@@ -5,7 +5,9 @@ function CategoryCard({ category }) {
   const navigate = useNavigate(); // Get the navigate function from react-router-dom
 
   return (
-    <div className="relative p-3 sm:p-4 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden max-w-xs sm:max-w-sm lg:max-w-md mx-auto border border-gray-300 dark:border-gray-700 min-h-[180px] flex flex-col justify-between">
+    <div className="relative p-3 sm:p-4 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden max-w-xs sm:max-w-sm lg:max-w-md mx-auto border border-gray-300 dark:border-gray-700 h-48 flex flex-col justify-between">
+      {/* Fixed height with h-48 ensures uniform card size */}
+      
       {/* Blue line on the top left */}
       <div className="absolute top-0 left-0 w-1/5 h-0.5 bg-cyan-400"></div>
 
@@ -18,7 +20,8 @@ function CategoryCard({ category }) {
         <h2 className="text-lg sm:text-xl font-bold text-black dark:text-white leading-tight">
           {category.title}
         </h2>
-        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+        {/* Clamping the description to 2 lines to avoid overflow */}
+        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
           {category.description}
         </p>
       </div>

@@ -1,7 +1,7 @@
-// src/pages/cybersecurityprojects/siem/SIEMProjects.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import CategoryCard from '../../../components/CategoryCard';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../../../components/ui/Card';
+import { Button } from '../../../components/ui/Button';
 
 const siemProjects = [
   {
@@ -27,6 +27,10 @@ const siemProjects = [
 export default function SIEMProjects() {
   const navigate = useNavigate();
 
+  const handleProjectClick = (path) => {
+    navigate(path);
+  };
+
   return (
     <div className="bg-gray-100 dark:bg-gray-900 min-h-screen p-6 flex flex-col items-center">
       <div className="mt-12 sm:mt-16 w-full flex justify-center relative">
@@ -39,7 +43,22 @@ export default function SIEMProjects() {
       <div className="max-w-4xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
           {siemProjects.map((project) => (
-            <CategoryCard key={project.id} category={project} />
+            <Card key={project.id} className="cursor-pointer" onClick={() => handleProjectClick(project.path)}>
+              <CardHeader>
+                <CardTitle>{project.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  {project.description}
+                </p>
+              </CardContent>
+              <CardFooter>
+                <Button onClick={(e) => {
+                  e.stopPropagation();
+                  handleProjectClick(project.path);
+                }}>View project</Button>
+              </CardFooter>
+            </Card>
           ))}
         </div>
       </div>

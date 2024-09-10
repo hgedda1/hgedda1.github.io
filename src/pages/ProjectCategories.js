@@ -1,19 +1,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
-import CategoryCard from '../components/CategoryCard';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../components/ui/Card';
+import { Button } from '../components/ui/Button';
 
 const categories = [
   {
     id: "01",
     title: "Cybersecurity Projects",
     description: "Explore various projects in cybersecurity.",
-    route: "/projects/cybersecurity" // Add a route for cybersecurity projects
+    route: "/projects/cybersecurity" // Ensure this route exists in your router
   },
   {
     id: "02",
     title: "Cloud Data Projects",
     description: "Handling the cloud data in AWS & Azure.",
-    route: "/projects/cloud-data" // Add a route for cloud data projects
+    route: "/projects/cloud-data" // Ensure this route exists in your router
   },
 ];
 
@@ -35,9 +36,29 @@ export default function ProjectCategories() {
       <div className="max-w-4xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {categories.map((category) => (
-            <div key={category.id} onClick={() => handleCardClick(category.route)}>
-              <CategoryCard category={category} />
-            </div>
+            <Card 
+              key={category.id} 
+              className="relative flex flex-col cursor-pointer" 
+              onClick={() => handleCardClick(category.route)} // Handle the card click for navigation
+            >
+              <CardHeader>
+                <CardTitle className="text-black dark:text-white">{category.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{category.description}</p>
+              </CardContent>
+              <CardFooter>
+                <Button 
+                  className="text-xs dark:text-black"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the card click when clicking the button
+                    handleCardClick(category.route); // Navigate on button click
+                  }}
+                >
+                  View projects
+                </Button>
+              </CardFooter>
+            </Card>
           ))}
         </div>
       </div>

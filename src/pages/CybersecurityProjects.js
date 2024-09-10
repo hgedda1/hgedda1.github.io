@@ -1,58 +1,90 @@
-// src/pages/CybersecurityProjects.js
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import CategoryCard from '../components/CategoryCard';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import { ArrowRight } from "lucide-react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../components/ui/Card";
+import { Button } from "../components/ui/Button";
 
 const categories = [
   {
     id: "01",
     title: "IAM Projects",
     description: "Explore various Identity and Access Management (IAM) Projects.",
-    path: "/projects/cybersecurity/iam"
+    path: "/projects/cybersecurity/iam",
   },
   {
     id: "02",
     title: "SIEM Projects",
     description: "Explore Security Information & Event Management (SIEM) projects.",
-    path: "/projects/cybersecurity/siem"
+    path: "/projects/cybersecurity/siem",
   },
   {
     id: "03",
     title: "Forensics Projects",
     description: "Explore Cyber Incident Response and Digital Forensics projects.",
-    path: "/projects/cybersecurity/forensics"
+    path: "/projects/cybersecurity/forensics",
   },
   {
     id: "04",
     title: "Risk Assessment Projects",
     description: "Explore Cyber Risk Assessment and Quantification projects.",
-    path: "/projects/cybersecurity/riskassessment"
+    path: "/projects/cybersecurity/riskassessment",
   },
   {
     id: "05",
     title: "Data Protection Projects",
     description: "Explore Data Protection and Privacy projects.",
-    path: "/projects/cybersecurity/dataprotection"
-  }
+    path: "/projects/cybersecurity/dataprotection",
+  },
+  {
+    id: "06",
+    title: "Endpoint Security Projects",
+    description: "Explore Endpoint Security projects.",
+    path: "/projects/cybersecurity/endpointsecurity",
+  },
 ];
 
 export default function CybersecurityProjects() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Initialize navigation hook
+
+  const handleCardClick = (path) => {
+    navigate(path); // Navigate to the specific project page
+  };
 
   return (
     <div className="bg-gray-100 dark:bg-gray-900 min-h-screen p-6 flex flex-col items-center">
-      {/* Container for Title */}
-      <div className="mt-12 sm:mt-16 w-full flex justify-center relative">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-black dark:text-white relative after:absolute after:content-[''] after:w-full after:h-0.5 after:bg-cyan-400 after:bottom-0 after:left-0 after:translate-y-2 blue-line-breathing">
+      <div className="mt-24 sm:mt-28 w-full flex justify-center relative">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-black dark:text-white blue-line-breathing">
           Cybersecurity Projects
         </h1>
       </div>
 
-      {/* Max width container for project cards */}
       <div className="max-w-4xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {categories.map((category) => (
-            <CategoryCard key={category.id} category={category} />
+            <Card key={category.id} className="relative flex flex-col bg-white dark:bg-gray-800">
+              <div className="absolute top-2 right-2 text-cyan-400 text-sm">
+                {category.id}
+              </div>
+              <CardHeader>
+                <CardTitle className="flex justify-between items-center text-gray-900 dark:text-gray-200">
+                  {category.title}
+                </CardTitle> {/* Ensure dark:text-gray-200 is applied */}
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <p className="text-sm text-gray-700 dark:text-gray-400">
+                  {category.description}
+                </p> {/* Description text that toggles for dark mode */}
+              </CardContent>
+              <CardFooter>
+                <Button
+                  className="bg-cyan-400 text-black dark:text-black hover:bg-cyan-500 w-auto px-3 py-1 flex items-center text-sm"
+                  onClick={() => handleCardClick(category.path)} // Correct navigation
+                >
+                  View projects
+                  <ArrowRight className="ml-2 h-3 w-3" />
+                </Button>
+              </CardFooter>
+            </Card>
           ))}
         </div>
       </div>
@@ -60,8 +92,8 @@ export default function CybersecurityProjects() {
       {/* Back Button positioned at the center-bottom */}
       <div className="mt-8 w-full flex justify-center">
         <button
-          className="button-81"
-          onClick={() => navigate(-1)} // Go back to the previous page
+          className="button-81 text-gray-900 dark:text-white dark:bg-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-600 border rounded-3xl px-4 py-2"
+          onClick={() => window.history.back()} // Go back to the previous page
         >
           &larr; Back
         </button>
