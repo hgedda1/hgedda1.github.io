@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import siemMarkdown from "../../../files/siem3.md";
+import siemMarkdown from "../../../files/siem/siem3.md";
 
 export default function SIEMProject3() {
   const [content, setContent] = useState("");

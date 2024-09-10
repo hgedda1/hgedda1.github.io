@@ -1,17 +1,15 @@
-// src/pages/cybersecurityprojects/siem/SIEMProject1.js
+// src/pages/cybersecurityprojects/forensics/IncidentResponseProject.js
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-import siemMarkdown from "../../../files/siem/siem1.md";
+import incidentResponseMarkdown from "../../../files/forensics/incident-response.md";
 
-export default function SIEMProject1() {
+export default function IncidentResponseProject() {
   const [content, setContent] = useState("");
-  const navigate = useNavigate(); // useNavigate for back navigation
+  const navigate = useNavigate(); // for back navigation
 
   useEffect(() => {
-    fetch(siemMarkdown)
+    fetch(incidentResponseMarkdown)
       .then((response) => response.text())
       .then((text) => setContent(text));
   }, []);
@@ -28,20 +26,15 @@ export default function SIEMProject1() {
           &larr; Back
         </button>
 
-        {/* SIEM Project Header */}
+        {/* Project Header */}
         <h1 className="text-2xl sm:text-3xl font-bold mx-auto text-black dark:text-white blue-line-breathing">
-          SIEM with ELK Stack
+          Incident Response
         </h1>
       </div>
 
       {/* Markdown Content */}
       <div className="max-w-4xl w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg markdown-content">
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]} // For GitHub-Flavored Markdown support
-          rehypePlugins={[rehypeRaw]}  // For rendering raw HTML content
-        >
-          {content}
-        </ReactMarkdown>
+        <ReactMarkdown>{content}</ReactMarkdown>
       </div>
 
       {/* Back Button at the bottom of the page */}

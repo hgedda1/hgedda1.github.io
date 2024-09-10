@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import rbacMarkdown from "../../../files/rbac.md";
+import rbacMarkdown from "../../../files/iam/rbac.md";
 
 export default function RBACProject() {
   const [content, setContent] = useState("");

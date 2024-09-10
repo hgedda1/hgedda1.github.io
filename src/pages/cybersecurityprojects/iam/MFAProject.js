@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import mfaMarkdown from "../../../files/mfa.md";
+import mfaMarkdown from "../../../files/iam/mfa.md";
 
 export default function MFAProject() {
   const [content, setContent] = useState("");

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import ssoMarkdown from "../../../files/sso.md"; 
+import ssoMarkdown from "../../../files/iam/sso.md"; 
 
 export default function SSOProject() {
   const [content, setContent] = useState("");
