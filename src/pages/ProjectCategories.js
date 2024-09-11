@@ -14,7 +14,7 @@ const categories = [
     id: "02",
     title: "Cloud Data Projects",
     description: "Handling the cloud data in AWS & Azure.",
-    route: "/projects/cloud-data" // Ensure this route exists in your router
+    route: "/projects/datacloud" // Ensure this route exists in your router
   },
 ];
 

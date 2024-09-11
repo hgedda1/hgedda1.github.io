@@ -37,6 +37,18 @@ import ComplianceMonitoring from './pages/cybersecurityprojects/regulatorycompli
 import VulnerabilityManagementProjects from './pages/cybersecurityprojects/vulnerabilitymanagement/VulnerabilityManagementProjects';
 import PatchAutomation from './pages/cybersecurityprojects/vulnerabilitymanagement/PatchAutomation';
 import WebApplication from './pages/cybersecurityprojects/vulnerabilitymanagement/WebApplication';
+import CloudDataProjects from './pages/CloudDataProjects';
+import AWSProjects from "./pages/datacloud/awsprojects/AWSProjects";
+import MachineLearning from "./pages/datacloud/awsprojects/MachineLearning";
+import PredictiveModeling from "./pages/datacloud/awsprojects/PredictiveModeling";
+import DataPipeline from "./pages/datacloud/awsprojects/DataPipeline";
+import DataManagement from "./pages/datacloud/awsprojects/DataManagement";
+import AzureProjects from './pages/datacloud/azureprojects/AzureProjects';
+import DataLake from './pages/datacloud/azureprojects/DataLake';
+import StreamAnalytics from './pages/datacloud/azureprojects/StreamAnalytics';
+import DataWarehouse from './pages/datacloud/azureprojects/DataWarehouse';
+import BigData from './pages/datacloud/azureprojects/BigData';
+import MLPipelines from './pages/datacloud/azureprojects/MLPipelines';
 
 import "./App.css";
 
@@ -145,6 +157,24 @@ function App() {
           <Route path="/projects/cybersecurity/vulnerabilitymanagement" element={<VulnerabilityManagementProjects />} />
           <Route path="/projects/cybersecurity/vulnerabilitymanagement/patchautomation" element={<PatchAutomation />} />
           <Route path="/projects/cybersecurity/vulnerabilitymanagement/webapplication" element={<WebApplication />} />
+
+          {/* Cloud Data route */}
+          <Route path="/projects/datacloud" element={<CloudDataProjects />} />
+
+          {/* AWS Projects */}
+          <Route path="/projects/datacloud/awsprojects" element={<AWSProjects />} />
+          <Route path="/projects/datacloud/awsprojects/machine-learning" element={<MachineLearning />} />
+          <Route path="/projects/datacloud/awsprojects/predictive-modeling" element={<PredictiveModeling />} />
+          <Route path="/projects/datacloud/awsprojects/data-pipeline" element={<DataPipeline />} />
+          <Route path="/projects/datacloud/awsprojects/data-management" element={<DataManagement />} />
+
+          {/* Azure Projects */}
+          <Route path="/projects/datacloud/azureprojects" element={<AzureProjects />} />
+          <Route path="/projects/datacloud/azureprojects/data-lake" element={<DataLake />} />
+          <Route path="/projects/datacloud/azureprojects/stream-analytics" element={<StreamAnalytics />} />
+          <Route path="/projects/datacloud/azureprojects/data-warehouse" element={<DataWarehouse />} />
+          <Route path="/projects/datacloud/azureprojects/big-data" element={<BigData />} />
+          <Route path="/projects/datacloud/azureprojects/ml-pipelines" element={<MLPipelines />} />
         </Routes>
 
         {/* Dark/Light Mode Toggle */}
