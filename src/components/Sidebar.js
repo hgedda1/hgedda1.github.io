@@ -25,7 +25,9 @@ const Sidebar = () => {
     "/projects/cybersecurity/dataprotection",
     "/projects/cybersecurity/endpointsecurity",
     "/projects/cybersecurity/regulatorycompliance",
-    "/projects/cybersecurity/vulnerabilitymanagement"
+    "/projects/cybersecurity/vulnerabilitymanagement",
+    "/projects/datacloud/awsprojects",
+    "/projects/datacloud/azureprojects"
   ];
 
   const showSidebar = !hideSidebarRoutes.includes(pathname);

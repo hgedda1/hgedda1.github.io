@@ -6,6 +6,7 @@ import MainContent from "./components/MainContent";
 import DarkModeToggle from "./components/DarkModeToggle";
 import ProjectCategories from './pages/ProjectCategories';
 import CybersecurityProjects from './pages/CybersecurityProjects';
+import Skills from './pages/Skills';
 import IAMProjects from './pages/cybersecurityprojects/iam/IAMProjects';
 import RBACProject from './pages/cybersecurityprojects/iam/RBACProject'; 
 import MFAProject from './pages/cybersecurityprojects/iam/MFAProject'; 
@@ -110,6 +111,7 @@ function App() {
           <Route path="/" element={<MainContent />} />
           <Route path="/projects" element={<ProjectCategories />} />
           <Route path="/projects/cybersecurity" element={<CybersecurityProjects />} />
+          <Route path="/skills" element={<Skills />} />
 
           {/* IAM Projects */}
           <Route path="/projects/cybersecurity/iam" element={<IAMProjects />} />
