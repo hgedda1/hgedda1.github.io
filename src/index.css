@@ -28,6 +28,10 @@
   font-family: 'Made Of Scars', sans-serif;
 }
 
+.font-customNuttoSans {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 /* Fullscreen grid layout with sidebar */
 .page-layout {
   display: grid;

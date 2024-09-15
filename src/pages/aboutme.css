@@ -1,0 +1,94 @@
+/* Base styles for light mode */
+.aboutme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f4f6; /* Light background */
+  }
+  
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem 0;
+  }
+  
+  .timeline {
+    position: relative;
+    margin: 0;
+    padding-left: 2rem;
+    border-left: 2px solid #00bcd4;
+  }
+  
+  .timeline-item {
+    margin-bottom: 2.5rem;
+    position: relative;
+    opacity: 0;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #00bcd4;
+  }
+  
+  .timeline-date {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #00bcd4;
+  }
+  
+  .timeline-content h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    color: #333;
+  }
+  
+  /* Dark Mode Styles */
+  .dark .aboutme-container {
+    background-color: #1a202c; /* Dark background */
+  }
+  
+  .dark .timeline {
+    border-left: 2px solid #ccc;
+  }
+  
+  .dark .timeline-item::before {
+    background-color: #ccc;
+  }
+  
+  .dark .timeline-date {
+    color: #ccc;
+  }
+  
+  .dark .timeline-content h3 {
+    color: #ddd;
+  }
+  
+  .dark .timeline-content p {
+    color: #bbb;
+  }
+  
+  /* Button styling */
+  .button-81 {
+    background-color: #00bcd4;
+    color: #000;
+    border-radius: 1.5rem;
+    padding: 0.4rem 1rem;
+  }
+  
+  .dark .button-81 {
+    background-color: #374151;
+    color: #d1d5db;
+  }
+  

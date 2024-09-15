@@ -7,6 +7,7 @@ import DarkModeToggle from "./components/DarkModeToggle";
 import ProjectCategories from './pages/ProjectCategories';
 import CybersecurityProjects from './pages/CybersecurityProjects';
 import Skills from './pages/Skills';
+import AboutMe from "./pages/AboutMe";
 import IAMProjects from './pages/cybersecurityprojects/iam/IAMProjects';
 import RBACProject from './pages/cybersecurityprojects/iam/RBACProject'; 
 import MFAProject from './pages/cybersecurityprojects/iam/MFAProject'; 
@@ -50,8 +51,8 @@ import StreamAnalytics from './pages/datacloud/azureprojects/StreamAnalytics';
 import DataWarehouse from './pages/datacloud/azureprojects/DataWarehouse';
 import BigData from './pages/datacloud/azureprojects/BigData';
 import MLPipelines from './pages/datacloud/azureprojects/MLPipelines';
-
 import "./App.css";
+
 
 // Layout component to conditionally show/hide Sidebar
 const Layout = ({ children }) => {
@@ -90,10 +91,16 @@ const Layout = ({ children }) => {
 };
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('darkMode') === 'true'; // Retrieve dark mode state from localStorage
+  });
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode(prevMode => {
+      const newMode = !prevMode;
+      localStorage.setItem('darkMode', newMode); // Store dark mode state in localStorage
+      return newMode;
+    });
   };
 
   useEffect(() => {
@@ -112,6 +119,8 @@ function App() {
           <Route path="/projects" element={<ProjectCategories />} />
           <Route path="/projects/cybersecurity" element={<CybersecurityProjects />} />
           <Route path="/skills" element={<Skills />} />
+          <Route path="/aboutme" element={<AboutMe darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} />
+
 
           {/* IAM Projects */}
           <Route path="/projects/cybersecurity/iam" element={<IAMProjects />} />

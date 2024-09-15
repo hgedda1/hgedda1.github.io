@@ -27,7 +27,8 @@ const Sidebar = () => {
     "/projects/cybersecurity/regulatorycompliance",
     "/projects/cybersecurity/vulnerabilitymanagement",
     "/projects/datacloud/awsprojects",
-    "/projects/datacloud/azureprojects"
+    "/projects/datacloud/azureprojects",
+    "/aboutme"
   ];
 
   const showSidebar = !hideSidebarRoutes.includes(pathname);
@@ -51,7 +52,7 @@ const Sidebar = () => {
             <Link to="/" className="text-black dark:text-white" onClick={handleLinkClick}>Home</Link>
             <Link to="/projects" className="text-black dark:text-white" onClick={handleLinkClick}>Projects</Link>
             <Link to="/skills" className="text-black dark:text-white" onClick={handleLinkClick}>Skills</Link>
-            <Link to="/about" className="text-black dark:text-white" onClick={handleLinkClick}>About Me</Link>
+            <Link to="/aboutme" className="text-black dark:text-white" onClick={handleLinkClick}>About Me</Link>
           </nav>
         </div>
       )}
@@ -89,7 +90,7 @@ const Sidebar = () => {
           </Link>
           <Link
             className="text-black dark:text-white font-customNunitoSans"
-            to="/about"
+            to="/aboutme"
             style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
           >
             About Me
