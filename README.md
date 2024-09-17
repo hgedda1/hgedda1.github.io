@@ -1,74 +1,136 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Hemanth Gedda | Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio project! This project showcases a
+variety of cybersecurity and cloud data projects that I have worked on,
+as well as my skills and experience. The portfolio is built using React,
+Tailwind CSS, and Framer Motion for smooth animations and transitions.
+It also includes dark mode support and mobile responsiveness for an
+optimized viewing experience.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1.  Technologies
+2.  Features
+3.  Project Structure
+4.  Setup and Installation
+5.  Dark Mode Toggle
+6.  Contributions
 
-### `npm start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This portfolio project is built with the following technologies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js: 
+    - A JavaScript library for building user interfaces. 
+- Tailwind CSS: 
+    - A utilityfirst CSS framework for styling. 
+- Framer Motion:
+    - A powerful library used to add animations and transitions. 
+- React Markdown:
+    - For rendering Markdown files as project content. 
+- remarkgfm and rehyperaw: 
+    - For GitHubFlavored Markdown and raw HTML rendering. 
+- React Router DOM: 
+    - For navigation between pages. 
+- SkillIcons GitHub Repository:
+    - For adding hover icons for skills.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Project Pages: 
+    - Detailed pages for each project, including Markdownbased descriptions. 
+- Dark Mode/Light Mode Toggle: 
+    - Allows users to toggle between dark and light modes. 
+- Mobile Responsive Design: 
+    - Ensures the portfolio works seamlessly on mobile and desktop devices. 
+- Smooth Animations: 
+    - Pages and components have smooth animations using Framer Motion. 
+- Back Button Navigation: 
+    - Easy navigation with 'Back' buttons for seamless project exploration. 
+- Categorybased Navigation: 
+    -Projects are categorized into different sections, such as IAM, SIEM, Vulnerability Management, and more.
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project is structured into several main categories:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Cybersecurity Projects
+    - Various projects that I worked on cybersecurity.
+- Cloud Data Projects
+    - Various projects that I worked on AWS and Azure.
+- Skills Page:
+    - Displays a comprehensive overview of my skills, including hover icons for Programming Languages, Cloud Platforms, and more.
+- About Me: 
+    - Provides insights into my background, experience, and professional journey. Includes a vertical timeline of my professional experience with animations and mobile responsiveness.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Setup and Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ensure you have the following installed on your system:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+"Node.js: \>= 14.x.x npm"
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Clone the Repository
+```
+git clone https://github.com/hgedda1/hgedda1.github.io.git 
+```
+```
+cd portfolio
+```
 
-## Learn More
+### Install Dependencies
+```
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Run the Development Server
+```
+npm start
+```
+This will start the development server, and you can view the portfolio on 
+```
+http://localhost:3000
+```
+### Build for Production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+create a branch called "gh-pages"
+```
+git checkout -b gh-pages
+```
+Merge the comitted changes of main branch into "gh-pages" branch.
 
-### Code Splitting
+To build for production run:
+```
+npm run build
+```
+To publish to github pages run:
+```
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Dark Mode Toggle
 
-### Analyzing the Bundle Size
+The portfolio has a builtin dark mode feature. You can toggle between
+dark and light modes using the button in the topright corner of each
+page. The dark mode state is saved in local storage, so your preference
+is remembered even when you revisit the site.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributions
 
-### Making a Progressive Web App
+If you'd like to contribute to this portfolio, feel free to submit a
+pull request. Here are a few things you can contribute to:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Improving animations or adding new ones. 
+- Enhancing mobile responsiveness. 
+- Fixing bugs or performance issues.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
+If you have any questions or want to reach out, feel free to connect via
+LinkedIn or email mentioned in my portfolio page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+https://hgedda1.github.io
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# portfolio
->>>>>>> 6430028077fe99ea7fd41638606896d5e517558d
