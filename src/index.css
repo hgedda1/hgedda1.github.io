@@ -108,49 +108,77 @@
   }
 }
 
+/* Default font size for larger screens */
+.main-content-container h1 {
+  font-size: 3rem; /* Adjust this value as needed */
+}
+
+/* Small screens (mobile) */
+@media (max-width: 640px) {
+  .main-content-container h1 {
+    font-size: 2rem; /* Adjust this to increase font size on mobile */
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .main-content-container h1 {
+    font-size: 2.5rem; /* Adjust this for tablets */
+  }
+}
+
+/* Larger screens (desktops) */
+@media (min-width: 1024px) {
+  .main-content-container h1 {
+    font-size: 4rem; /* Adjust for large screens */
+  }
+}
+
 /* H2 fill animation */
 .h2-fill-animation {
   position: relative;
-  color: transparent;
-  background-image: linear-gradient(90deg, black 50%, transparent 50%);
+  display: inline-block;
+  font-size: 2rem;
+  background-image: linear-gradient(90deg, black 0%, transparent 100%);
   background-size: 200% 100%;
-  background-position: 0%;
+  background-position: 100% 0;
+  color: transparent;
   -webkit-background-clip: text;
-  animation: fill-text 7s infinite;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fill-text-left-to-right 5s linear infinite; /* Infinite looping */
 }
 
 .dark .h2-fill-animation {
-  background-image: linear-gradient(90deg, white 50%, transparent 50%);
+  background-image: linear-gradient(90deg, white 0%, transparent 100%);
 }
 
-@keyframes fill-text {
+@keyframes fill-text-left-to-right {
   0% {
-    background-position: 0%;
-  }
-  50% {
-    background-position: 100%;
+    background-position: 100% 0;
   }
   100% {
-    background-position: 0%;
+    background-position: -100% 0;
   }
 }
 
 /* Responsive font scaling */
+/* Small screens (mobile) */
 @media (max-width: 640px) {
-  .h2-fill-animation {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
   .h2-fill-animation {
     font-size: 1.25rem;
   }
 }
-
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .h2-fill-animation {
+    font-size: 1.5rem;
+  }
+}
+/* Larger screens (desktops) */
 @media (min-width: 1024px) {
   .h2-fill-animation {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
   }
 }
 

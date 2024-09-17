@@ -113,6 +113,7 @@ function App() {
 
   return (
     <Router>
+      <DarkModeToggle toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
       <Layout>
         <Routes>
           <Route path="/" element={<MainContent />} />

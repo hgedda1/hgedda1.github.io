@@ -1,5 +1,6 @@
+// src/pages/Skills.js
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import {
   FaPython,
   FaAws,
@@ -143,20 +144,37 @@ const skills = [
 
 export default function Skills() {
   return (
-    <div className="skills-container">
+    <motion.div
+      className="skills-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       {skills.map((category, categoryIndex) => (
-        <div key={categoryIndex} className="category-section">
+        <motion.div
+          key={categoryIndex}
+          className="category-section"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
+        >
           <h2 className="category-title blue-line-breathing">{category.category}</h2>
           <div className="skills-grid">
             {category.skills.map((skill, skillIndex) => (
-              <div key={skillIndex} className="icon-container">
+              <motion.div
+                key={skillIndex}
+                className="icon-container"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: skillIndex * 0.1 }}
+              >
                 {skill.icon}
                 <p>{skill.name}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }

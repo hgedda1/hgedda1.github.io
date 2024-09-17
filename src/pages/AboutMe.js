@@ -1,9 +1,10 @@
+// src/pages/AboutMe.js
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { BsLinkedin, BsGithub, BsEnvelope } from 'react-icons/bs';
 import DarkModeToggle from '../components/DarkModeToggle';
 import { Button } from '../components/ui/Button';
-import resumePdf from '../assets/hemanth_gedda.pdf'; // Import the resume
+import resumePdf from '../assets/hemanth_gedda.pdf'; 
 
 export default function AboutMe({ darkMode, toggleDarkMode }) {
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function AboutMe({ darkMode, toggleDarkMode }) {
 
   const experiences = [
     { title: "Information Security Specialist", company: "Kdex Global", date: "June 2024 - Present", description: "Leading information security initiatives and implementing robust cybersecurity measures." },
-    { title: "TRON Associate", company: "Amazon", date: "2020 - 2024", description: "Worked on cutting-edge technologies and contributed to Amazon's technical operations." },
+    { title: "TRON Associate", company: "Amazon", date: "2020 - 2021", description: "Worked on cutting-edge technologies and contributed to Amazon's technical operations." },
     { title: ".NET Developer", company: "FusionIT", date: "2019 - 2020", description: "Developed and maintained enterprise-level applications using .NET framework." },
     { title: "Unity Developer", company: "Puffy Thumb Game Studio", date: "2018 - 2019", description: "Created immersive gaming experiences using Unity game engine." }
   ];
